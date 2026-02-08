@@ -24,6 +24,11 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
+    env:
+      BASE_URL: ${{ vars.BASE_URL }}
+      USER_EMAIL: ${{ secrets.USER_EMAIL }}
+      INVALID_PASSWORD: ${{ secrets.INVALID_PASSWORD }}
+
     steps:
       - uses: actions/checkout@v4
 
